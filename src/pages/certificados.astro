@@ -1,0 +1,26 @@
+---
+import HeaderVisitor from "../components/HeaderVisitor.astro";
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro'
+import UsuarioNav from "../components/UsuarioNav.astro";
+import CursosUser from "../components/CursosUser.astro";
+
+---
+
+<Layout title="Certificados Usuario">
+    <HeaderVisitor/>
+    <div class="flex justify-star bg-[#F9F8F8] shadow-2xl bg-opacity-25 h-[600px]  gap-[40px] mb-[50px]  h-full y w-full ">
+        <UsuarioNav/>
+        <div class="mb-[400px] bg-[##020617]">
+            <strong>Nombre</strong>
+            <br>
+            <div class="flex flex-row">
+                <i class='bx bxs-file'></i>
+                <strong>Base de datos SQL</strong>
+                <i class='bx bxs-download'></i>
+            </div>
+        </div>
+    </div>
+    <Footer/>
+</Layout>
+

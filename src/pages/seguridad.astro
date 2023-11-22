@@ -1,0 +1,40 @@
+---
+import HeaderVisitor from "../components/HeaderVisitor.astro";
+import SeguridadComponent from "../components/SeguridadComponent.astro";
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro'
+import UsuarioNav from "../components/UsuarioNav.astro";
+---
+
+<Layout title="Seguridad Usuario">
+    <HeaderVisitor/>
+    <div class="flex  justify-around mb-[100px] ">
+        <UsuarioNav/>
+        <div class="bg-[#F9F8F8] shadow-2xl bg-opacity-25 w-1/2 h-[490px] pb-8 pt-10 rounded-md relative ">
+            <div class="text-center">
+                <h1 class="text-black font-bold text-2xl text-center">Revisión de seguridad</h1>
+            </div>
+            <section class="pt-[15px] flex flex-col justify-center items-center">
+                <SeguridadComponent 
+                title="Tus dispositivos"
+                dato="Hay 2 dispositivos en los que has iniciado sesión"
+                >
+                </SeguridadComponent>
+                <br>
+                <SeguridadComponent 
+                title="Verificacion 2 pasos"
+                dato="Esta verificación se encuentra activada"
+                >
+                </SeguridadComponent>
+                <br>
+                <SeguridadComponent 
+                    title="Acceso de terceros"
+                    dato="Aplicacion con acceso a terceros"
+                >
+                </SeguridadComponent>
+            </section>
+        </div>
+    </div>
+    <br>
+    <Footer/>
+</Layout>

@@ -1,0 +1,47 @@
+---
+import HeaderVisitor from "../components/HeaderVisitor.astro";
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro'
+import UsuarioNav from "../components/UsuarioNav.astro";
+import CursosUser from "../components/CursosUser.astro";
+
+---
+
+<Layout title="Mis cursos">
+    <HeaderVisitor/>
+    <div class="flex justify-around items-center  bg-[#F9F8F8] shadow-2xl bg-opacity-25 h-[600px]  gap-[40px] mb-[50px]  h-full y w-full ">
+        <UsuarioNav/>
+        <section class="flex gap-[15px] justify-center items-center ">
+            <CursosUser 
+            title="Desarrollo Back-End"
+            score="5.0"         
+            img="../../public/image2.jpeg"
+            category="Desarrollo de software">
+            <i slot="stars" class="fa-solid fa-star"></i>
+            <i slot="stars" class="fa-solid fa-star"></i>
+            <i slot="stars" class="fa-solid fa-star"></i>
+            <i slot="stars" class="fa-solid fa-star"></i>
+            <i slot="stars" class="fa-solid fa-star"></i>
+            </CursosUser>
+            <CursosUser 
+            title="Desarrollo Front-End con HTML, CSS y JavaScript"
+            score="3.5"         
+            img="../../public/image1.jpg"
+            category="Desarrollo de software">
+            <i slot="stars" class="fa-solid fa-star"></i>
+            <i slot="stars" class="fa-solid fa-star"></i>
+            <i slot="stars" class="fa-solid fa-star"></i>
+            </CursosUser>
+            <CursosUser 
+            title="Fundamentos de Python"
+            score="2.8"         
+            img="../../public/image3.jpeg"
+            category="Desarrollo de software">
+            <i slot="stars" class="fa-solid fa-star"></i>
+            <i slot="stars" class="fa-solid fa-star"></i>
+            </CursosUser>
+        </section>
+        
+    </div>
+    <Footer/>
+</Layout>

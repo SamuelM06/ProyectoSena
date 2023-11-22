@@ -1,0 +1,37 @@
+---
+import HeaderVisitor from "../components/HeaderVisitor.astro";
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro'
+import UsuarioNav from "../components/UsuarioNav.astro";
+import CursosUser from "../components/CursosUser.astro";
+
+---
+
+<Layout title="Informacion Usuario">
+    <HeaderVisitor/>
+    <div class="flex justify-star items-center  bg-[#F9F8F8] shadow-2xl bg-opacity-25 h-[600px]  gap-[40px] mb-[50px]  h-full y w-full ">
+        <UsuarioNav/>
+        <section class="mb-[200px] gap-[20px]">
+            <div>
+                <strong class="text-[#00324D]">Nombre:</strong>
+                <h3 class="text-[#020617]">Carlos arturo</h3>
+            </div>
+            <br>
+            <div>
+                <strong class="text-[#00324D]">Apellido:</strong>
+                <h3 class="text-[#020617]">Bacca ahumada</h3>
+            </div>
+            <br>
+            <div>
+                <strong class="text-[#00324D]">N° Id o Gmail:</strong>
+                <h3 class="text-[#020617]">Baccagoleador9@gmail.com</h3>
+            </div>
+            <br>
+            <div>
+                <strong class="text-[#00324D]">Contraseña:</strong>
+                <h3 class="text-[#020617]">********</h3>
+            </div>
+        </section>
+    </div>
+    <Footer/>
+</Layout>

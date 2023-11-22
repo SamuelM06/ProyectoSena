@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Inputs from "../components/Inputs.astro";
+---
+
+<Layout title="Iniciar sesión">
+    <a href="/" class="hover:bg-black hover:scale-110 transition-all duration-200 absolute left-7 top-7 bg-[#00324D] rounded-full w-[50px] h-[50px] p-5 text-white cursor-pointer flex justify-center items-center">
+        <svg class="w-16" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 550"><style>svg{fill:#ffffff}</style><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+    </a>
+    <main class="w-full h-screen flex justify-center items-center bg-[#00324D] lg:bg-white">
+        <section class="md:w-3/4 w-full flex flex-col items-center gap-2 mx-auto justify-center p-10 text-center" transition:name="mainnn" transition:animate="slide">
+            <h2 class="text-3xl sm:text-5xl font-bold text-white lg:text-[#00324D]">Inicio de sesión</h2>
+            <form class="flex flex-col w-full lg:w-2/4">
+                <Inputs placeholder="N° de identificación o Email" type="email"/>
+                <Inputs placeholder="Contraseña" type="password"/>
+            </form>
+            <div class="flex w-full justify-center flex-col sm:flex-row items-center">
+                <div class="mx-5 flex items-center">
+                    <input type="checkbox" name="" id="remember-password-login" class="cursor-pointer">
+                    <span class="mx-2 font-semibold text-sm sm:text-base text-white lg:text-[#00324D]">Recordar contraseña</span>
+                </div>
+                <div class="mx-5 ">
+                    <a href="" class="font-semibold decoration-solid text-sm sm:text-base text-white lg:text-[#00324D]">¿Olvidó su contraseña?</a>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flew-row my-3">
+                <button class="lg:text-white lg:bg-[#00324D] text-[#00324D] bg-white py-2 px-3 rounded-xl text-base font-semibold hover:scale-110 hover:bg-black transition-all duration-200 hover:shadow-lg">Iniciar sesión</button>
+                <span class="mx-4 inline-block lg:hidden lg:text-[#00324D] text-white">O</span>
+                <button class="inline-block lg:hidden bg-[#39A900] lg:bg-white text-[#00324D]  py-2 px-3 rounded-xl text-base sm:text-xl font-semibold hover:scale-110 transition-all duration-200 border-2 border-[#00324D]">Registrarse</button>
+            </div>
+            <div class="flex gap-3">
+                <a href=""><img src="../../public/twitter-x-logo-0339F999CF-seeklogo.com.png" alt="Logo de X" class="w-[35px] hover:scale-125 transition-all duration-200"></a>
+                <a href=""><img src="../../public/logo-google.png" alt="Logo de Google" class="w-[35px] hover:scale-125 transition-all duration-200"></a>
+                <a href=""><img src="../../public/logo-facebook.png" alt="Logo de Facebook" class="w-[35px] hover:scale-125 transition-all duration-200"></a>
+            </div>
+        </section>
+        <section class="bg-[#00324D] w-2/4 hidden flex-col items-center justify-center gap-2 border-l-[16px] border-[#39A900] lg:flex h-full" transition:name="main2" transition:animate="slide">
+            <h3 class="text-3xl font-bold text-white">¿No tienes una cuenta?</h3>
+            <span class="text-white">No te preocupes, crea una en instantes</span>
+            <a href="./register" id="desktop-register-btn" class="cursor-pointer bg-white text-[#00324D] py-2 px-3 rounded-xl font-semibold mx-3 hover:scale-110 transition-all duration-200 hover:shadow-lg">Registrarse</a>
+        </section>
+    </main>
+</Layout>
